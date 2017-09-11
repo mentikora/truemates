@@ -5,6 +5,10 @@
 		padding: 0;
 	}
 
+	li{
+		display: inline-block;
+	}
+
 	button{
 		background: none;
 		border: none;
@@ -14,5 +18,14 @@
 		text-transform: uppercase;
 	}
 
+	/* Modification => header */
+	&--header{
+
+	}
+
+	/* Modification => footer*/
+	&--footer{
+		text-align: center;
+	}
 
 }

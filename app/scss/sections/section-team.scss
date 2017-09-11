@@ -1,0 +1,34 @@
+.section-team{
+
+	/* title */
+	&__title{
+		text: {
+			align: center;
+			transform: uppercase;
+		}
+	}
+
+	/* slides wrapper */
+	&__slides-wrapper{
+
+	}
+}
+
+.section-team-slide{
+	text-transform: uppercase;
+
+	/* location*/
+	&__location{
+
+	}
+
+	/* name */
+	&__name{
+
+	}
+
+	/* info */
+	&__info{
+
+	}
+}

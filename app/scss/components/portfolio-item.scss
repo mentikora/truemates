@@ -1,5 +1,6 @@
 .portfolio-item{
-	
+	text-align: center;
+
 	/* image */
 	&__image{
 		img{}
@@ -7,11 +8,14 @@
 
 	/* title */
 	&__title{
-
+		text-transform: uppercase;
 	}
 	
 	/* list */ 
 	&__list{
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
 
 		/* list item */ 
 		li{
