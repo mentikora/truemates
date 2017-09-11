@@ -9,7 +9,7 @@ const pngquant = require('imagemin-pngquant');
 const concat = require('gulp-minify-css');
 
 gulp.task('imagemin', function () {
-  return gulp.src('/images/*')
+  return gulp.src('app/images/*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],
