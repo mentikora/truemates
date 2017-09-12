@@ -1,3 +1,19 @@
 .header{
-	
+
+	.container{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__logo-wrapper{
+		position: relative;
+	}
+
+	/* mobile menu button */ 
+	&__menu-button{
+		@media(min-width: 991px){
+			display: none;
+		}
+	}
 }

@@ -7,6 +7,9 @@
 
 	li{
 		display: inline-block;
+		@media(max-width: 991px){
+			text-align: center;
+		}
 	}
 
 	button{
@@ -20,12 +23,33 @@
 
 	/* Modification => header */
 	&--header{
+		@media(min-width: 992px){
+			display: block !important;
+		}
+		@media(max-width: 991px){
+			flex: 0 0 100%;
+			display: none;
 
+			li{
+				display: block;
+			}
+		}
 	}
 
 	/* Modification => footer*/
 	&--footer{
 		text-align: center;
+
+		@media(max-width: 991px){
+			ul{
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			li{
+				flex: 0 0 33%;
+			}
+		}
 	}
 
 }

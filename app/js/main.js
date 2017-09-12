@@ -16,5 +16,10 @@ $(document).ready(function(){
 		$(this).siblings('.portfolio-item__list').slideToggle();
 	});
 
+	// Mobile menu button
+	$('.header__menu-button').on('click', function(){
+		$('.navigation--header').slideToggle();
+	});
+
 
 });

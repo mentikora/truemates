@@ -7,11 +7,24 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		@media(max-width: 991px){
+			flex-direction: column;
+		}
 	}
 
-	&__contacts-logo{}
+	&__contacts-logo{
+		@media(max-width: 991px){
+			order: 2;
+		}
+	}
 
 	&__contacts-info{
+		@media(max-width: 991px){
+			order: 1;
+			text-align: center;
+		}
+
 		h2{
 			margin: 0;
 			text-transform: uppercase;
