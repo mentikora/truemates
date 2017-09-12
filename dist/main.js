@@ -1,0 +1,1 @@
+$(document).ready(function(){"use strict";$(".navigation button").on("click",function(){var t=$(this).data("scroll");$("html,body").animate({scrollTop:$(""+t).offset().top},1e3)}),$(".portfolio-item__image").on("click",function(){$(this).siblings(".portfolio-item__list").slideToggle()})});

@@ -15,12 +15,12 @@
 			<!-- navigation -->
 			<nav class="navigation navigation--header">
 				<ul>
-					<li><button>Start</button></li>
-					<li><button>Service</button></li>
-					<li><button>Campaigns</button></li>
-					<li><button>About Us</button></li>
-					<li><button>Team</button></li>
-					<li><button>Contact</button></li>
+					<li><button data-scroll="#start">Start</button></li>
+					<li><button data-scroll="#service">Service</button></li>
+					<li><button data-scroll="#campaigns">Campaigns</button></li>
+					<li><button data-scroll="#about">About Us</button></li>
+					<li><button data-scroll="#team">Team</button></li>
+					<li><button data-scroll="#contacts">Contact</button></li>
 				</ul>
 			</nav>
 		</div>
@@ -30,7 +30,7 @@
 	<main class="main-wrapper">
 	
 		<!-- welcome section -->
-		<section class="section-welcome">
+		<section class="section-welcome" id="start">
 			<h1 class="section-welcome__title">
 				times have changed
 			</h1>
@@ -49,7 +49,7 @@
 		</section>
 
 		<!-- portfolio section -->
-		<section class="section-portfolio">
+		<section class="section-portfolio" id="service">
 			<h2 class="section-portfolio__title">
 				Our service portfolio
 			</h2>
@@ -58,7 +58,7 @@
 				<div class="portfolio-items-wrapper">
 
 					<!-- portfolio-item -->
-					<div class="portfolio-item">
+					<div class="portfolio-item portfolio-item--film">
 						<div class="portfolio-item__image">
 							<h3 class="portfolio-item__title">
 								film
@@ -73,7 +73,7 @@
 					</div>
 
 					<!-- portfolio-item -->
-					<div class="portfolio-item">
+					<div class="portfolio-item portfolio-item--ads">
 						<div class="portfolio-item__image">
 							<h3 class="portfolio-item__title">
 								vertical ads
@@ -87,7 +87,7 @@
 					</div>
 
 					<!-- portfolio-item -->
-					<div class="portfolio-item">
+					<div class="portfolio-item portfolio-item--content">
 						<div class="portfolio-item__image">
 							<h3 class="portfolio-item__title">
 								content pieces
@@ -102,7 +102,7 @@
 					</div>
 
 					<!-- portfolio-item -->
-					<div class="portfolio-item">
+					<div class="portfolio-item portfolio-item--photo">
 						<div class="portfolio-item__image">
 							<h3 class="portfolio-item__title">
 								photo
@@ -119,9 +119,9 @@
 			</div>
 
 		</section>
-		
+
 		<!-- slider section -->
-		<section class="section-slider">
+		<section class="section-slider" id="campaigns">
 			video slider
 		</section>
 
@@ -178,7 +178,24 @@
 				<!-- dot content item -->
 				<div class="dot-content-item">
 					<div class="container">
-						dot content item film
+						<h2 class="dot-content-item__title">
+							title
+						</h2>
+						<h3 class="dot-content-item__subtitle">
+							subtitle
+						</h3>
+						<p class="dot-content-item__text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, asperiores sequi suscipit voluptates dolor vel est laborum cupiditate, quae nam dolorem cumque, minima maiores? Laboriosam numquam vitae, deserunt animi quibusdam!
+						</p>
+						<p class="dot-content-item__text dot-content-item__text--center">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, asperiores sequi suscipit voluptates dolor vel est laborum cupiditate, quae nam dolorem cumque, minima maiores? Laboriosam numquam vitae, deserunt animi quibusdam!
+						</p>
+						<div class="dot-content-item__explore-more">
+							<div class="dot-content-item__em-item">1</div>
+							<div class="dot-content-item__em-item">2</div>
+							<div class="dot-content-item__em-item">3</div>
+							<div class="dot-content-item__em-item">4</div>
+						</div>
 					</div>
 				</div>	
 
@@ -208,7 +225,7 @@
 		</section>
 
 		<!-- about us section -->
-		<section class="section-about-us">
+		<section class="section-about-us" id="about">
 
 			<!-- tab-item -->
 			<div class="tab-item">
@@ -273,7 +290,7 @@
 		</section>
 
 		<!-- team section -->
-		<section class="section-team">
+		<section class="section-team" id="team">
 			<h2 class="section-team__title">
 				team
 			</h2>
@@ -303,17 +320,17 @@
 		<!-- navigation -->
 		<nav class="navigation navigation--footer">
 			<ul>
-				<li><button>Start</button></li>
-				<li><button>Service</button></li>
-				<li><button>Campaigns</button></li>
-				<li><button>About Us</button></li>
-				<li><button>Team</button></li>
-				<li><button>Contact</button></li>
+				<li><button data-scroll="#start">Start</button></li>
+				<li><button data-scroll="#service">Service</button></li>
+				<li><button data-scroll="#campaigns">Campaigns</button></li>
+				<li><button data-scroll="#about">About Us</button></li>
+				<li><button data-scroll="#team">Team</button></li>
+				<li><button data-scroll="#contacts">Contact</button></li>
 			</ul>
 		</nav>
 
 		<!-- footer contacts -->
-		<div class="footer__contacts">
+		<div class="footer__contacts" id="contacts">
 			<div class="footer__contacts-logo">
 				<a href="/" class="logo">logo</a>
 			</div>
@@ -335,12 +352,7 @@
 	</footer>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-	<script>
-		$(document).ready(function(){
-			console.log('ready!');
-		});
-	</script>
+	<script src="../dist/main.js"></script>
 
 </body>
 </html>

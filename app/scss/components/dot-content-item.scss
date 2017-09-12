@@ -1,3 +1,31 @@
 .dot-content-item{
 	
+	&__title,
+	&__subtitle,
+	&__text--center{
+		text: {
+			align: center;
+			transform: uppercase;
+		}
+	}
+
+	&__title{}
+
+	&__subtitle{
+		text-align: center;
+	}
+
+	&__text{
+		&--center{
+			
+		}
+	}
+
+	&__explore-more{
+		display: flex;
+		justify-content: center;
+	}
+	&__em-item{
+		flex: 0 0 25%;
+	}
 }

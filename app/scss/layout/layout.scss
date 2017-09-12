@@ -27,3 +27,33 @@ main.main-wrapper{
     right: auto;
   }
 }
+
+/* customize scrollbar */
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  outline: 1px solid darkgray;
+} 
+
+/* font style */
+.text{
+  &--center{
+    text-align: center;
+  }
+} 
+
+/* visually hidden */
+.visually-hidden{
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important; 
+  width: 1px !important; 
+  overflow: hidden;
+}
