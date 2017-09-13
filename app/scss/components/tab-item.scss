@@ -3,6 +3,11 @@
 	/* title */
 	&__title{
 		text-transform: uppercase;
+
+		font: {
+			size: 40px;
+			weight: normal;
+		}
 	}
 	
 	/* content */ 
@@ -12,7 +17,12 @@
 	
 	/* text */
 	&__text{
-
+		font: {
+			size: 28px;
+			weight: normal;
+		}
+		color: $color-text;
+		line-height: 48px;
 	}
 
 }

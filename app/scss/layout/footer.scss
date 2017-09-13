@@ -3,34 +3,58 @@
 	/* contacts */
 	&__contacts{
 		width: 100%;
+		height: 490px;
 
 		display: flex;
 		justify-content: center;
 		align-items: center;
 
+		background-color: $color-secondary;
+
 		@media(max-width: 991px){
 			flex-direction: column;
+		}
+
+		&-inner{
+			display: flex;
 		}
 	}
 
 	&__contacts-logo{
+		margin-right: 45px;
+		img{
+			max-width: 470px;
+			display: block;
+			height: auto;
+		}
 		@media(max-width: 991px){
 			order: 2;
 		}
 	}
 
 	&__contacts-info{
+
 		@media(max-width: 991px){
 			order: 1;
 			text-align: center;
 		}
-
+		
+		h2,
+		p{
+			font: {
+				size: 28px;
+				weight: normal;
+			}
+			line-height: 50px;
+		}
 		h2{
 			margin: 0;
 			text-transform: uppercase;
+			color: $color-primary;
 		}
 		p{
 			margin: 0;
+			color: $color-white;
 		}
 	}
 }

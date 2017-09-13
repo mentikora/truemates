@@ -1,12 +1,30 @@
 .section-portfolio{
+
+	background-color: $color-primary;
+	padding: {
+		bottom: 450px;
+	}
 	
 	/* title */	
 	&__title{
-		text-transform: uppercase;
-		text-align: center;
+		text: {
+			transform: uppercase;
+			align: center;
+		}
+
+		font: {
+			size: 72px;
+			weight: 300;
+		}
+		line-height: 80px;
+		color: $color-black;
 	}
 
 	.portfolio-items-wrapper{
 		display: flex;
+		margin: {
+			left: -10px;
+			right: -10px;
+		}
 	}
 }

@@ -1,4 +1,10 @@
 .dot-content-item{
+
+	background-color: $color-secondary;
+	padding: {
+		top: 50px;
+		bottom: 50px;
+	}
 	
 	&__title,
 	&__subtitle,
@@ -7,15 +13,38 @@
 			align: center;
 			transform: uppercase;
 		}
+		
 	}
 
-	&__title{}
+	&__title{
+		margin: 0;
+
+		color: $color-white;
+		font: {
+			size: 144px;
+			weight: 900;
+		}
+	}
 
 	&__subtitle{
+		margin: 0;
+
 		text-align: center;
+		color: $color-white;
+		font: {
+			size: 72px;
+			weight: normal;
+		}
 	}
 
 	&__text{
+		color: $color-white;
+		font: {
+			size: 28px;
+			weight: normal;
+		}
+		line-height: 48px;
+
 		&--center{
 			
 		}
