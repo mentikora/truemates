@@ -1,9 +1,25 @@
 .section-welcome{
 	text-align: center;
+	min-height: calc(100vh - 170px);
+
+	background: {
+		image: url('./images/welcome-section-bg.jpg');
+		repeat: no-repeat;
+		position: left bottom;
+		size: cover;
+	}
 
 	/* title */
 	&__title{
+		margin-top: 180px;
 		text-transform: uppercase;
+
+		font: {
+			size: 56px;
+			weight: 300;
+		}
+		color: $color-black;
+		line-height: 80px;
 	}
 	
 	/* text */
@@ -15,5 +31,11 @@
 			left: auto;
 		}
 		max-width: 35%;
+
+		font: {
+			size: 24px;
+			font-weight: normal;
+		}
+		line-height: 36px;
 	}
 }

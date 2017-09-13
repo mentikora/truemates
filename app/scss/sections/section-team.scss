@@ -1,4 +1,7 @@
 .section-team{
+	padding-bottom: 400px;
+	
+	background-color: $color-primary;
 
 	/* title */
 	&__title{
@@ -6,6 +9,12 @@
 			align: center;
 			transform: uppercase;
 		}
+
+		font: {
+			size: 144px;
+			weight: 900;
+		}
+		color: $color-white;
 	}
 
 	/* slides wrapper */
@@ -14,21 +23,91 @@
 	}
 }
 
+.section-team-slides-wrapper{
+	display: flex;
+}
 .section-team-slide{
+	flex: 0 0 calc(100% / 3);
+	height: 575px;
+
 	text-transform: uppercase;
+	color: $color-text;
+	
+	&__location,
+	&__name,
+	&__info{
+		padding: {
+			left: 20px;
+			right: 20px;
+		}
+	}
+
 
 	/* location*/
 	&__location{
+		margin: 0;
 
+		font: {
+			size: 26px;
+			weight: normal;
+		}
+		background-color: $color-white;
 	}
 
 	/* name */
 	&__name{
-
+		margin: {
+			top: 5px;
+			bottom: 5px;
+		}
+		font: {
+			size: 48px;
+			weight: 900;
+		}
+		background-color: $color-white;
 	}
 
 	/* info */
 	&__info{
+		margin: {
+			top: 0;
+			bottom: 70px;
+		}
 
+		font: {
+			size: 24px;
+			weight: normal;
+		}
+		background-color: $color-white;
+	}
+
+	/* Modification */
+	&--sonia,
+	&--phillip{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		
+	}
+	&--sonia{
+		align-items: flex-start;
+
+		background: {
+			image: url('./images/team-sonja.png');
+			position: 50%;
+			repeat: no-repeat;
+			size: cover;
+		}
+	}
+	&--phillip{
+		align-items: flex-end;
+		text-align: right;
+
+		background: {
+			image: url('./images/team-phillip.png');
+			position: 50%;
+			repeat: no-repeat;
+			size: cover;
+		}
 	}
 }

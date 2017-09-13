@@ -9,7 +9,7 @@ body{
   min-height: 100vh;
 	
 	font: {
-		family: $base-font;
+		family: 'Lato';
 		weight: 300;
 	}
 }
@@ -21,7 +21,7 @@ main.main-wrapper{
 }
 
 .container{
-  width: 80%;
+  width: 90%;
   margin: {
     left: auto;
     right: auto;
@@ -57,3 +57,18 @@ body::-webkit-scrollbar-thumb {
   width: 1px !important; 
   overflow: hidden;
 }
+
+/* clearfix */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */

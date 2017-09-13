@@ -1,14 +1,39 @@
 .header{
 
+	height: 170px;
+	background-color: $color-primary;
+
 	.container{
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-end;
 		flex-wrap: wrap;
+
+		height: 100%;
 	}
 
-	&__logo-wrapper{
+	&-logo-wrapper{
 		position: relative;
+		max-width: 25%;
 	}
+
+	.logo{
+		display: block;
+		width: 100%;
+		position: relative;
+		z-index: 2;
+		left: 0;
+		bottom: -50px;
+
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+
+	
 
 	/* mobile menu button */ 
 	&__menu-button{
