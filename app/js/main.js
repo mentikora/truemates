@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 		$('html,body').animate({
     	scrollTop: $('' + scroll).offset().top
-		}, 1000);		
+		}, 2000);		
 	});
 
 	// Portfolio item, show list

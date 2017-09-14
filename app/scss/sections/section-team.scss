@@ -1,10 +1,32 @@
 .section-team{
-	padding-bottom: 400px;
-	
 	background-color: $color-primary;
+
+	@media(max-width: $screen-lg-max){
+		padding: {
+			top: 50px;
+			bottom: 50px;
+		}
+	}
+	@media(min-width: $screen-lg){
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		height: 100vh;
+		padding: {
+			top: 100px;
+			bottom: 100px;
+		}
+	}
 
 	/* title */
 	&__title{
+		margin: {
+			top: 0;
+			bottom: 40px;
+		}
+		
 		text: {
 			align: center;
 			transform: uppercase;
@@ -25,13 +47,17 @@
 
 .section-team-slides-wrapper{
 	display: flex;
+	width: 100%;
 }
 .section-team-slide{
 	flex: 0 0 calc(100% / 3);
-	height: 575px;
 
 	text-transform: uppercase;
 	color: $color-text;
+
+	@media(min-width: $screen-lg){
+		height: 50vh;
+	}
 	
 	&__location,
 	&__name,

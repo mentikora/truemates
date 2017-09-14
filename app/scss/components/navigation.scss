@@ -3,7 +3,6 @@
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
-		text-align: right;
 	}
 
 	li{
@@ -57,10 +56,20 @@
 		    visibility: hidden;
 		    pointer-events: none;
 			}
+			&:hover,
+			&:focus{
+				color: $color-white;
+
+				&:after{
+					opacity: 1;
+					visibility: visible;
+					pointer-events: auto;
+				}
+			}
 		}
 		
 		@media(max-width: $screen-xl-max){
-			font-size: 21px;
+			font-size: 18px;
 		}
 		@media(min-width: $screen-xl){
 			font-size: 28px;
@@ -69,6 +78,7 @@
 
 	/* Modification => header */
 	&--header{
+		text-align: right;
 		@media(min-width: $screen-md) and (max-width: $screen-xl-max){
 			li{
 				margin: {
@@ -106,17 +116,6 @@
 			width: 75%;
 			display: block !important;
 			margin-bottom: 25px;
-
-			button:hover,
-			button:focus{
-				color: $color-white;
-
-				&:after{
-					opacity: 1;
-					visibility: visible;
-					pointer-events: auto;
-				}
-			}
 		}
 		@media(min-width: $screen-xl){
 			margin-bottom: 40px;
@@ -128,14 +127,16 @@
 		text-align: center;
 		margin-top: 15px;
 
-		padding: {
-			top: 45px;
-			bottom: 45px;
-		}
+		
 
 		background-color: $color-primary;
 
 		@media(max-width: $screen-lg-max){
+			padding: {
+				top: 25px;
+				bottom: 25px;
+			}
+
 			ul{
 				display: flex;
 				flex-wrap: wrap;
@@ -143,6 +144,17 @@
 
 			li{
 				flex: 0 0 33%;
+			}
+
+			button{
+				color: $color-white;
+				line-height: 50px;
+			}
+		}
+		@media(min-width: $screen-lg){
+			padding: {
+				top: 45px;
+				bottom: 45px;
 			}
 		}
 	}
