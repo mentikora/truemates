@@ -1,7 +1,13 @@
 .header{
-
-	height: 170px;
+	
 	background-color: $color-primary;
+
+	@media(max-width: $screen-xl-max){
+		height: 70px;
+	}
+	@media(min-width: $screen-xl){
+		height: 170px;
+	}
 
 	.container{
 		display: flex;
@@ -14,7 +20,16 @@
 
 	&-logo-wrapper{
 		position: relative;
-		max-width: 25%;
+		@media(max-width: $screen-sm-max){
+			width: 150px;
+		}
+		@media(min-width: $screen-sm) and (max-width: $screen-md-max){
+			width: 50%;
+		}
+		@media(min-width: $screen-md){
+			width: 25%;	
+		}
+		
 	}
 
 	.logo{
@@ -23,7 +38,14 @@
 		position: relative;
 		z-index: 2;
 		left: 0;
-		bottom: -50px;
+		
+
+		@media(max-width: $screen-sm-max){
+			bottom: -25px;
+		}
+		@media(min-width: $screen-sm){
+			bottom: -50px;
+		}
 
 		img{
 			display: block;
@@ -32,12 +54,31 @@
 		}
 	}
 
-
-	
-
 	/* mobile menu button */ 
 	&__menu-button{
-		@media(min-width: 991px){
+		
+		width: 50px;
+		margin-bottom: 15px;
+
+		background: inherit;
+		border: 0;
+		outline: 0;
+
+		span{
+			display: block;
+			height: 2px;
+			margin-bottom: 6px;
+
+			background-color: $color-black;
+
+			transition: $transition;
+		}
+
+		&:hover span{
+			background-color: $color-white;
+		}
+
+		@media(min-width: $screen-lg){
 			display: none;
 		}
 	}

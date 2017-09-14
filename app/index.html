@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
 	<title>Truemates</title>
 	<link rel="stylesheet" href="../dist/application.css">
 </head>
@@ -17,7 +19,12 @@
 			</div>
 			
 			<!-- mobile-button -->
-			<button class="header__menu-button"></button>
+			<button class="header__menu-button">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 
 			<!-- navigation -->
 			<nav class="navigation navigation--header">
@@ -38,22 +45,45 @@
 	
 		<!-- welcome section -->
 		<section class="section-welcome" id="start">
-			<h1 class="section-welcome__title">
-				times have changed
-			</h1>
-			<p class="section-welcome__text">
-				Media consumption has changed. The rise of mobile also
-				changed the way people consume content. Snapchat has
-				lead the way with the vertical format, Instagram Stories,
-				Facebook and recently even YouTube followed.
-			</p>
-			<p class="section-welcome__text">
-				Whether you like it or not: consumers don't turn their
-				phones to view video. With a background in Influencer
-				Marketing and with a profound classic production expertise
-				TRUEMATES is here to create state-of-the-art content.
-			</p>
+			
+			<div class="container">
+				<div class="side side--left"></div>
+				
+				<div class="side side--middle">
+					<h1 class="section-welcome__title">
+						times have changed
+					</h1>
+					<p class="section-welcome__text">
+						Media consumption has changed. The rise of mobile also
+						changed the way people consume content. Snapchat has
+						lead the way with the vertical format, Instagram Stories,
+						Facebook and recently even YouTube followed.
+					</p>
+					<p class="section-welcome__text mobile--hide">
+						Whether you like it or not: consumers don't turn their
+						phones to view video. With a background in Influencer
+						Marketing and with a profound classic production expertise
+						TRUEMATES is here to create state-of-the-art content.
+					</p>
+				</div>
+				<div class="side side--right">
+					<div class="mobile--hide">
+						<img src="../dist/images/phones.png" alt="truemates-phones">
+					</div>
+				</div>
+			</div>
 		</section>
+		<div class="mobile--show text--center">
+			<div class="container">
+				<img src="../dist/images/phones.png" alt="truemates-phones">
+				<p class="section-welcome__text mobile--show">
+					Whether you like it or not: consumers don't turn their
+					phones to view video. With a background in Influencer
+					Marketing and with a profound classic production expertise
+					TRUEMATES is here to create state-of-the-art content.
+				</p>
+			</div>
+		</div>
 
 		<!-- portfolio section -->
 		<section class="section-portfolio" id="service">
@@ -71,7 +101,7 @@
 								film
 							</h3>
 						</div>
-						<ul class="portfolio-item__list">
+						<ul class="portfolio-item__list visually-hidden">
 							<li>Preroll</li>
 							<li>Brand Film</li>
 							<li>Online Commercial</li>
@@ -86,7 +116,7 @@
 								vertical ads
 							</h3>
 						</div>
-						<ul class="portfolio-item__list">
+						<ul class="portfolio-item__list visually-hidden">
 							<li>Instagram Story Ad</li>
 							<li>Snapchat Ad</li>
 							<li>Facebook Bumper Ad</li>
@@ -100,7 +130,7 @@
 								content pieces
 							</h3>
 						</div>
-						<ul class="portfolio-item__list">
+						<ul class="portfolio-item__list visually-hidden">
 							<li>Gif</li>
 							<li>Animation</li>
 							<li>Stop Motion</li>
@@ -115,7 +145,7 @@
 								photo
 							</h3>
 						</div>
-						<ul class="portfolio-item__list">
+						<ul class="portfolio-item__list visually-hidden">
 							<li>Campaign</li>
 							<li>Behind The Scene</li>
 							<li>Online Magazine</li>
@@ -365,6 +395,7 @@
 	</footer>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 	<script src="../dist/main.js"></script>
 
 </body>

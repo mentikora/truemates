@@ -1,12 +1,32 @@
 .section-portfolio{
 
 	background-color: $color-primary;
-	padding: {
-		bottom: 450px;
+	
+	@media(max-width: $screen-lg-max){
+		padding: {
+			top: 50px;
+			bottom: 50px;
+		}
+	}
+	@media(min-width: $screen-lg){
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		height: 100vh;
+		padding: {
+			top: 100px;
+			bottom: 100px;
+		}
 	}
 	
 	/* title */	
 	&__title{
+		margin: {
+			top: 0;
+			bottom: 40px;
+		}
 		text: {
 			transform: uppercase;
 			align: center;
@@ -22,9 +42,13 @@
 
 	.portfolio-items-wrapper{
 		display: flex;
-		margin: {
-			left: -10px;
-			right: -10px;
+		flex-wrap: wrap;
+
+		@media(min-width: $screen-md){
+			margin: {
+				left: -10px;
+				right: -10px;
+			}
 		}
 	}
 }

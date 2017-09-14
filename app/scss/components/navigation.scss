@@ -3,19 +3,20 @@
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
+		text-align: right;
 	}
 
 	li{
 		display: inline-block;
 
-		@media(max-width: 991px){
+		@media(max-width: $screen-lg-max){
 			text-align: center;
 		}
-		
-		@media(min-width: 992px){
+
+		@media(min-width: $screen-lg){
 			margin: {
-				left: 20px;
-				right: 20px;
+				left: 15px;
+				right: 15px;
 			}
 		}
 	}
@@ -27,27 +28,98 @@
 		padding: 0;
 
 		text-transform: uppercase;
+		position: relative;
 		
 		font: {
-			size: 28px;
 			weight: normal;
 		}
 		color: $color-black;
+		transition: $transition;
+		
+		@media(min-width: $screen-lg){
+			&::after{
+		    content: 'l';
+		    position: absolute;
+		    top: 30px;
+		    left: 50%;
+		    width: 100px;
+
+		    display: block;
+		    margin-left: -50px;
+
+		    font-family: 'Northwell Swash';
+		    color: $color-white;
+		    font-size: 50px;
+
+		    transition: $transition;
+
+		    opacity: 0;
+		    visibility: hidden;
+		    pointer-events: none;
+			}
+		}
+		
+		@media(max-width: $screen-xl-max){
+			font-size: 21px;
+		}
+		@media(min-width: $screen-xl){
+			font-size: 28px;
+		}
 	}
 
 	/* Modification => header */
 	&--header{
-		@media(min-width: 992px){
-			display: block !important;
-			margin-bottom: 40px;
+		@media(min-width: $screen-md) and (max-width: $screen-xl-max){
+			li{
+				margin: {
+					left: 10px;
+					right: 10px;
+				}
+			}
 		}
-		@media(max-width: 991px){
-			flex: 0 0 100%;
-			display: none;
+		@media(max-width: $screen-lg-max){
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+
+			position: absolute;
+			top: 70px;
+			left: 0;
+			width: 100%;
+
+			line-height: 50px;
+			background-color: $color-white;
+
+			transition: $transition;
+
+			&.active{
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+			}
 
 			li{
 				display: block;
 			}
+		}
+		@media(min-width: $screen-lg){
+			width: 75%;
+			display: block !important;
+			margin-bottom: 25px;
+
+			button:hover,
+			button:focus{
+				color: $color-white;
+
+				&:after{
+					opacity: 1;
+					visibility: visible;
+					pointer-events: auto;
+				}
+			}
+		}
+		@media(min-width: $screen-xl){
+			margin-bottom: 40px;
 		}
 	}
 
@@ -63,7 +135,7 @@
 
 		background-color: $color-primary;
 
-		@media(max-width: 991px){
+		@media(max-width: $screen-lg-max){
 			ul{
 				display: flex;
 				flex-wrap: wrap;

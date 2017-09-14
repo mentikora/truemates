@@ -72,3 +72,23 @@ body::-webkit-scrollbar-thumb {
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
 /* close commented backslash hack */
+
+/* show/hide mobile */
+.mobile{
+  &--hide{
+    @media(min-width: $screen-xl){
+      display: block;
+    }
+    @media(max-width: $screen-xl-max){
+      display: none !important;
+    }
+  }
+  &--show{
+    @media(min-width: $screen-xl){
+      display: none;
+    }
+    @media(max-width: $screen-xl-max){
+      display: block !important;
+    }
+  }
+} 
