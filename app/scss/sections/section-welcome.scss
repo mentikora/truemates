@@ -9,9 +9,20 @@
 		size: cover;
 	}
 
+	.container{
+		display: flex;
+		
+		@media(max-width: $screen-xl-max){
+			flex-direction: column;
+		}
+		@media(min-width: $screen-xl){
+			align-items: center;	
+		}
+	}
+
 	/* title */
 	&__title{
-		margin-top: 180px;
+		//margin-top: 180px;
 		text-transform: uppercase;
 
 		font: {
@@ -30,12 +41,33 @@
 			bottom: 30px;
 			left: auto;
 		}
-		max-width: 35%;
 
 		font: {
-			size: 24px;
-			font-weight: normal;
+			weight: normal;
 		}
-		line-height: 36px;
+		
+
+		@media(max-width: $screen-xl-max){
+			font-size: 18px;
+			line-height: 28px;
+		}
+		@media(min-width: $screen-xl){
+			font-size: 24px;
+			line-height: 36px;
+		}
+	}
+
+	.side{
+		flex: 0 0 calc(100% / 3);
+
+		img{
+			display: inline-block;
+			max-width: 100%;
+			height: auto;
+		}
+
+		&--right{
+			text-align: right;
+		}
 	}
 }

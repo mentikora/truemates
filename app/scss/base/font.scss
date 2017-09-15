@@ -117,3 +117,39 @@
 	font-weight: 300;
 	font-style: italic;
 }
+
+@font-face {
+	font-family: 'Northwell Swash';
+	src: url('./fonts/NorthwellSwash.eot');
+	src: url('./fonts/NorthwellSwash.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/NorthwellSwash.woff2') format('woff2'),
+		url('./fonts/NorthwellSwash.woff') format('woff'),
+		url('./fonts/NorthwellSwash.ttf') format('truetype'),
+		url('./fonts/NorthwellSwash.svg#NorthwellSwash') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Northwell Alt';
+	src: url('./fonts/NorthwellAlt.eot');
+	src: url('./fonts/NorthwellAlt.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/NorthwellAlt.woff2') format('woff2'),
+		url('./fonts/NorthwellAlt.woff') format('woff'),
+		url('./fonts/NorthwellAlt.ttf') format('truetype'),
+		url('./fonts/NorthwellAlt.svg#NorthwellAlt') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Northwell';
+	src: url('./fonts/Northwell.eot');
+	src: url('./fonts/Northwell.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/Northwell.woff2') format('woff2'),
+		url('./fonts/Northwell.woff') format('woff'),
+		url('./fonts/Northwell.ttf') format('truetype'),
+		url('./fonts/Northwell.svg#Northwell') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
