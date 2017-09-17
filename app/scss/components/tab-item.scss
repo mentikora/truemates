@@ -1,26 +1,105 @@
 .tab-item{
+	height: 100%;
+
+	display: flex;
+
+	&.active{
+		flex-grow: 1;
+
+		.tab-item__content{
+			display: flex;
+			width: 100%;
+			opacity: 1;
+
+			margin-right: 10px;
+
+			transition: all .25s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+			padding: {
+				top: 40px;
+				right: 40px;
+			}
+		}
+	}
 
 	/* title */
 	&__title{
-		text-transform: uppercase;
+		position: relative;
+		width: 160px;
+		height: 100%;
+		line-height: 160px;
+		margin-right: 10px;
 
-		font: {
-			size: 40px;
-			weight: normal;
-		}
+		display: flex;
+		align-items: flex-end;
+
+		cursor: pointer;
+
+		background-color: $color-primary;
 	}
 	
+	/* text */
+	&__title-text{
+		display: block;
+		float: left;
+
+		margin-bottom: -120px;
+
+		transform: rotate(-90deg);
+		transform-origin: left top 0;
+
+		text-transform: uppercase;
+		white-space: nowrap;
+
+		font: {
+			size: 30px;
+			weight: normal;
+		}
+		color: $color-text;
+	}
+
 	/* content */ 
 	&__content{
+		width: 0;
+		opacity: 0;
 
+		flex-direction: column;
+		align-items: flex-end;
+		flex-grow: 1;
+
+		background: {
+			size: cover;
+			position: left top;
+			repeat: no-repeat;
+		}
+	}
+
+	&__content-1{
+		background-image: url('./images/bookmark-1.jpg');
+	}
+	&__content-2{
+		background-image: url('./images/bookmark-2.jpg');
+	}
+	&__content-3{
+		background-image: url('./images/bookmark-3.png');
+	}
+	&__content-4{
+		background-image: url('./images/bookmark-4.jpg');
+	}
+	&__content-5{
+		background-image: url('./images/bookmark-5.jpg');
 	}
 	
 	/* text */
 	&__text{
+		width: 80%;
+		margin: 0;
+
 		font: {
 			size: 28px;
 			weight: normal;
 		}
+		text-align: right;
 		color: $color-text;
 		line-height: 48px;
 	}

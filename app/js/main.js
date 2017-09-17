@@ -21,5 +21,24 @@ $(document).ready(function(){
 		$('.navigation--header').toggleClass('active');
 	});
 
+	// Team slider
+	$('.section-team-slider').slick({
+		autoplay: true,
+		autoplaySpeed: 2000,
+		arrows: false,
+		dots: false,
+		fade: true
+	});
+
+	// Bookmarks
+	$('.tab-item__title').on('click', function(){
+		var parent = $(this).parent();
+
+		parent.addClass('active');
+		parent.siblings().removeClass('active');
+
+		console.log(parent);
+	});
+
 
 });

@@ -1,0 +1,15 @@
+.section-about-us{
+	height: calc(100vh - 20px);
+
+	padding: {
+		top: 10px;
+		bottom: 10px;
+	}
+}
+
+.tabs-wrapper{
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+}

@@ -51,6 +51,7 @@
 }
 .section-team-slide{
 	flex: 0 0 calc(100% / 3);
+	overflow: hidden;
 
 	text-transform: uppercase;
 	color: $color-text;
@@ -67,7 +68,6 @@
 			right: 20px;
 		}
 	}
-
 
 	/* location*/
 	&__location{
@@ -134,6 +134,39 @@
 			position: 50%;
 			repeat: no-repeat;
 			size: cover;
+		}
+	}
+
+	&--slider{
+
+	}
+}
+
+/* team slider, team slider items*/ 
+.section-team-slider{
+	height: 100%;
+
+	.slick-list,
+	.slick-track{
+		height: 100%;
+	}
+	.team-slide{
+		height: 100%;
+		overflow: hidden;
+
+		background: {
+			position: 50%;
+			repeat: no-repeat;
+			size: cover;
+		}
+		&--1{
+			background-image: url('./images/team-lukas.png');
+		}
+		&--2{
+			background-image: url('./images/jinx.jpg');
+		}
+		&--3{
+			background-image: url('./images/portfolio-film.jpg');
 		}
 	}
 }
