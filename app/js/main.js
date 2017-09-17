@@ -21,13 +21,30 @@ $(document).ready(function(){
 		$('.navigation--header').toggleClass('active');
 	});
 
-	// Team slider
-	$('.section-team-slider').slick({
+	// Portfolio slider
+	$('.portfolio-slider').slick({
 		autoplay: true,
-		autoplaySpeed: 2000,
+		autoplaySpeed: 5000,
 		arrows: false,
 		dots: false,
-		fade: true
+		initialSlide: 1
+	});
+	$('.portfolio-slider').on('beforeChange', function(){
+		var currentSlideData = $('.portfolio-slider .slick-current').data('slide');
+		$('.dots-list[data-slide-dots="' + currentSlideData +'"]').removeClass('active');
+	});
+	$('.portfolio-slider').on('afterChange', function(){
+		var currentSlideData = $('.portfolio-slider .slick-current').data('slide');
+		$('.dots-list[data-slide-dots="' + currentSlideData +'"]').addClass('active');
+	});
+
+	// Dots
+	$('.dot-item').on('click', function(){
+		var data = $(this).data('dot');
+		var dataItem = $('.dot-content-item[data-dot-content="' + data +'"]');
+
+		dataItem.siblings().slideUp();
+		dataItem.slideToggle();
 	});
 
 	// Bookmarks
@@ -36,9 +53,15 @@ $(document).ready(function(){
 
 		parent.addClass('active');
 		parent.siblings().removeClass('active');
-
-		console.log(parent);
 	});
 
+	// Team slider
+	$('.section-team-slider').slick({
+		autoplay: true,
+		autoplaySpeed: 2000,
+		arrows: false,
+		dots: false,
+		//fade: true
+	});
 
 });

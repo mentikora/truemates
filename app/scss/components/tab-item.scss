@@ -1,23 +1,30 @@
 .tab-item{
-	height: 100%;
-
 	display: flex;
+
+	@media(max-width: $screen-lg-max){
+		flex-direction: column;
+	}
+	@media(min-width: $screen-lg){
+		height: 100%;
+	}
 
 	&.active{
 		flex-grow: 1;
 
 		.tab-item__content{
 			display: flex;
-			width: 100%;
+			
 			opacity: 1;
-
-			margin-right: 10px;
 
 			transition: all .25s cubic-bezier(0.39, 0.575, 0.565, 1);
 
-			padding: {
-				top: 40px;
-				right: 40px;
+			@media(max-width: $screen-lg-max){
+				height: 400px;
+				margin-bottom: 5px;
+			}
+			@media(min-width: $screen-lg){
+				width: 100%;
+				margin-right: 10px;
 			}
 		}
 	}
@@ -25,17 +32,26 @@
 	/* title */
 	&__title{
 		position: relative;
-		width: 160px;
-		height: 100%;
-		line-height: 160px;
-		margin-right: 10px;
-
-		display: flex;
-		align-items: flex-end;
-
 		cursor: pointer;
 
 		background-color: $color-primary;
+
+		@media(max-width: $screen-lg-max){
+			padding: 20px;
+			margin-bottom: 5px;
+
+			line-height: 21px;
+		}
+		@media(min-width: $screen-lg){
+			display: flex;
+			align-items: flex-end;
+
+			width: 160px;
+			height: 100%;
+
+			margin-right: 10px;
+			line-height: 160px;
+		}
 	}
 	
 	/* text */
@@ -43,24 +59,27 @@
 		display: block;
 		float: left;
 
-		margin-bottom: -120px;
-
-		transform: rotate(-90deg);
-		transform-origin: left top 0;
-
 		text-transform: uppercase;
 		white-space: nowrap;
 
-		font: {
-			size: 30px;
-			weight: normal;
-		}
+		font-weight: normal;
 		color: $color-text;
+
+		@media(max-width: $screen-lg-max){
+			font-size: 21px;
+		}
+		@media(min-width: $screen-lg){
+			margin-bottom: -120px;
+
+			transform: rotate(-90deg);
+			transform-origin: left top 0;
+
+			font-size: 30px;
+		}
 	}
 
 	/* content */ 
 	&__content{
-		width: 0;
 		opacity: 0;
 
 		flex-direction: column;
@@ -69,8 +88,16 @@
 
 		background: {
 			size: cover;
-			position: left top;
 			repeat: no-repeat;
+		}
+
+		@media(max-width: $screen-lg-max){
+			height: 0;
+			background-position: 50%;
+		}
+		@media(min-width: $screen-lg){
+			width: 0;
+			background-position: left top;
 		}
 	}
 
@@ -92,16 +119,24 @@
 	
 	/* text */
 	&__text{
-		width: 80%;
-		margin: 0;
-
-		font: {
-			size: 28px;
-			weight: normal;
-		}
+		font-weight: normal;
 		text-align: right;
 		color: $color-text;
-		line-height: 48px;
+
+		@media(max-width: $screen-lg-max){
+			width: 50%;
+			margin: 20px 20px 0 0;
+
+			font-size: 18px;
+			line-height: 25px;
+		}
+		@media(min-width: $screen-lg){
+			width: 80%;
+			margin: 40px 40px 0 0;
+
+			font-size: 28px;
+			line-height: 48px;
+		}
 	}
 
 }

@@ -1,3 +1,54 @@
 .section-slider{
+	overflow: hidden;
+
+	/* slider */
+	.portfolio-slider-wrapper{
+		width: 80%;
+		position: relative;
+		margin: {
+			left: auto;
+			right: auto;
+		}
+		
+		&::before,
+		&::after{
+			content: '';
+			width: 200%;
+			height: 100%;
+
+			display: block;
+			position: absolute;
+			top: 0;
+			z-index: 2;
+
+			background-color: rgba(0,0,0, .5);
+		}
+		&::before{
+			right: 100%;
+		}
+		&::after{
+			left: 100%;
+		}
+	}
+	.portfolio-slider{
+		height: 300px;
+
+		.slick-list{
+			overflow: visible;
+		}
+
+		.ps1{
+			background-color: #000;
+		}
+		.ps2{
+			background-color: green;
+		}
+		.ps3{
+			background-color: yellow;
+		}
+		.ps4{
+			background-color: orange;
+		}
+	}
 
 }
