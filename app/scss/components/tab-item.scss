@@ -1,28 +1,142 @@
 .tab-item{
+	display: flex;
+
+	@media(max-width: $screen-lg-max){
+		flex-direction: column;
+	}
+	@media(min-width: $screen-lg){
+		height: 100%;
+	}
+
+	&.active{
+		flex-grow: 1;
+
+		.tab-item__content{
+			display: flex;
+			
+			opacity: 1;
+
+			transition: all .25s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+			@media(max-width: $screen-lg-max){
+				height: 400px;
+				margin-bottom: 5px;
+			}
+			@media(min-width: $screen-lg){
+				width: 100%;
+				margin-right: 10px;
+			}
+		}
+	}
 
 	/* title */
 	&__title{
-		text-transform: uppercase;
+		position: relative;
+		cursor: pointer;
 
-		font: {
-			size: 40px;
-			weight: normal;
+		background-color: $color-primary;
+
+		@media(max-width: $screen-lg-max){
+			padding: 20px;
+			margin-bottom: 5px;
+
+			line-height: 21px;
+		}
+		@media(min-width: $screen-lg){
+			display: flex;
+			align-items: flex-end;
+
+			width: 160px;
+			height: 100%;
+
+			margin-right: 10px;
+			line-height: 160px;
 		}
 	}
 	
+	/* text */
+	&__title-text{
+		display: block;
+		float: left;
+
+		text-transform: uppercase;
+		white-space: nowrap;
+
+		font-weight: normal;
+		color: $color-text;
+
+		@media(max-width: $screen-lg-max){
+			font-size: 21px;
+		}
+		@media(min-width: $screen-lg){
+			margin-bottom: -120px;
+
+			transform: rotate(-90deg);
+			transform-origin: left top 0;
+
+			font-size: 30px;
+		}
+	}
+
 	/* content */ 
 	&__content{
+		opacity: 0;
 
+		flex-direction: column;
+		align-items: flex-end;
+		flex-grow: 1;
+
+		background: {
+			size: cover;
+			repeat: no-repeat;
+		}
+
+		@media(max-width: $screen-lg-max){
+			height: 0;
+			background-position: 50%;
+		}
+		@media(min-width: $screen-lg){
+			width: 0;
+			background-position: left top;
+		}
+	}
+
+	&__content-1{
+		background-image: url('./images/bookmark-1.jpg');
+	}
+	&__content-2{
+		background-image: url('./images/bookmark-2.jpg');
+	}
+	&__content-3{
+		background-image: url('./images/bookmark-3.png');
+	}
+	&__content-4{
+		background-image: url('./images/bookmark-4.jpg');
+	}
+	&__content-5{
+		background-image: url('./images/bookmark-5.jpg');
 	}
 	
 	/* text */
 	&__text{
-		font: {
-			size: 28px;
-			weight: normal;
-		}
+		font-weight: normal;
+		text-align: right;
 		color: $color-text;
-		line-height: 48px;
+
+		@media(max-width: $screen-lg-max){
+			width: 50%;
+			margin: 20px 20px 0 0;
+
+			font-size: 18px;
+			line-height: 25px;
+		}
+		@media(min-width: $screen-lg){
+			width: 80%;
+			margin: 40px 40px 0 0;
+
+			font-size: 28px;
+			line-height: 48px;
+		}
 	}
 
 }

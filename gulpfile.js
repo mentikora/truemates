@@ -30,7 +30,7 @@ gulp.task('sass', function () {
 gulp.task('uglify', function() {
   gulp.src('app/js/*.js')
     .pipe(uglify('main.js'))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('watch', ['sass', 'uglify'], function(){

@@ -1,13 +1,20 @@
 .dot-item{
-	margin: {
-		left: 15px;
-		right: 15px;
+	width: calc(100% / 6);
+	cursor: pointer;
+	
+	@media(max-width: $screen-lg-max){
+		margin: 0;
+	}
+	@media(min-width: $screen-lg){
+		margin: {
+			left: 15px;
+			right: 15px;
+		}
 	}
 
 	/* image */
 	&__image{
-		width: 170px;
-		height: 170px;
+		
 		margin: {
 			left: auto;
 			right: auto;
@@ -21,19 +28,32 @@
 
 			border-radius: 50%;
 		}
+		@media(max-width: $screen-lg-max){
+			width: 70px;
+			height: 70px;
+		}
+		@media(min-width: $screen-lg){
+			width: 170px;
+			height: 170px;
+		}
 	}
 	
 	/* title */ 
 	&__title{
+		margin: 0;
 		text: {
 			align: center;
 			transform: uppercase;
 		}
 
-		font: {
-			size: 36px;
-			weight: normal;
-		}
+		font-weight: normal;
 		color: $color-text;
+
+		@media(max-width: $screen-lg-max){
+			font-size: 21px;
+		}
+		@media(min-width: $screen-lg){
+			font-size: 36px;
+		}
 	}
 }

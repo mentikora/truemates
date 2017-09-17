@@ -1,8 +1,13 @@
 .section-dots{
+	padding-top: 30px;
 
 	.dots-list{
-		display: flex;
+		display: none;
 		justify-content: center;	
+
+		&.active{
+			display: flex;
+		}
 	}
 	
 }
