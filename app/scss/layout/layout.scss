@@ -92,3 +92,16 @@ body::-webkit-scrollbar-thumb {
     }
   }
 } 
+
+/* brush-font */
+.brush-font{
+  display: inline-block;
+  font-family: 'Northwell Swash';
+
+  @media(max-width: $screen-md-max){
+    font-size: 60px;
+  }
+  @media(min-width: $screen-md){
+    font-size: 120px;
+  }
+}
