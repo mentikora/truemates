@@ -1,12 +1,19 @@
 .section-welcome{
 	text-align: center;
-	min-height: calc(100vh - 170px);
+	
 
 	background: {
 		image: url('./images/welcome-section-bg.jpg');
 		repeat: no-repeat;
 		position: left bottom;
 		size: cover;
+	}
+	
+	@media(max-width: $screen-xl-max){
+		min-height: calc(100vh - 70px);
+	}
+	@media(min-width: $screen-xl){
+		min-height: calc(100vh - 170px);
 	}
 
 	.container{
@@ -73,7 +80,7 @@
 }
 
 .underwelcome{
-		@media(max-width: $screen-lg-max){
+		@media(max-width: $screen-xl-max){
 			max-width: 80%;
 			margin: {
 				left: auto;

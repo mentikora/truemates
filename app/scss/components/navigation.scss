@@ -8,6 +8,13 @@
 	li{
 		display: inline-block;
 
+		&:first-child{
+			margin-left: 0;
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+
 		@media(max-width: $screen-lg-max){
 			text-align: center;
 		}
@@ -71,7 +78,10 @@
 		@media(max-width: $screen-xl-max){
 			font-size: 18px;
 		}
-		@media(min-width: $screen-xl){
+		@media(min-width: $screen-xl)and(max-width: 1350px){
+			font-size: 25px;
+		}
+		@media(min-width: 1350px){
 			font-size: 28px;
 		}
 	}
