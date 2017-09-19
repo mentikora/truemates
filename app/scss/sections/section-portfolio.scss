@@ -26,17 +26,22 @@
 			top: 0;
 			bottom: 40px;
 		}
+
 		text: {
 			transform: uppercase;
 			align: center;
 		}
-
-		font: {
-			size: 72px;
-			weight: 300;
-		}
-		line-height: 80px;
+		font-weight: 300;
 		color: $color-black;
+		
+		@media(max-width: $screen-md-max){
+			font-size: 25px;
+			line-height: 35px;
+		}
+		@media(min-width: $screen-md){
+			font-size: 72px;
+			line-height: 80px;
+		}
 	}
 
 	.portfolio-items-wrapper{
