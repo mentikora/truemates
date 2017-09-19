@@ -41,6 +41,7 @@
 			margin-bottom: 5px;
 
 			line-height: 21px;
+			text-align: center;
 		}
 		@media(min-width: $screen-lg)and(max-width: $screen-xl-max){
 			display: flex;
@@ -66,33 +67,36 @@
 	
 	/* text */
 	&__title-text{
-		display: block;
-		float: left;
-
 		text-transform: uppercase;
-		white-space: nowrap;
-
 		font-weight: normal;
 		color: $color-text;
 
 		@media(max-width: $screen-lg-max){
-			font-size: 21px;
+			font-size: 16px;
 		}
 		@media(min-width: $screen-lg)and(max-width: $screen-xl-max){
+			display: block;
+			float: left;
+
 			margin-bottom: -60px;
 
 			transform: rotate(-90deg);
 			transform-origin: left top 0;
 
 			font-size: 30px;
+			white-space: nowrap;
 		}
 		@media(min-width: $screen-xl){
+			display: block;
+			float: left;
+
 			margin-bottom: -120px;
 
 			transform: rotate(-90deg);
 			transform-origin: left top 0;
 
 			font-size: 30px;
+			white-space: nowrap;
 		}
 	}
 
