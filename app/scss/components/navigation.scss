@@ -65,6 +65,7 @@
 			}
 			&:hover,
 			&:focus{
+				text-shadow: 1px 1px 1px rgba($color-text, .3);
 				color: $color-white;
 
 				&:after{

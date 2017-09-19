@@ -1,5 +1,6 @@
 .section-portfolio{
 	background-color: $color-primary;
+	text-align: center;
 	
 	@media(max-width: $screen-lg-max){
 		padding: {
@@ -22,10 +23,7 @@
 	
 	/* title */	
 	&__title{
-		margin: {
-			top: 0;
-			bottom: 40px;
-		}
+		margin: 0;
 
 		text: {
 			transform: uppercase;
@@ -42,6 +40,9 @@
 			font-size: 72px;
 			line-height: 80px;
 		}
+	}
+	.brush-font{
+		margin-bottom: 40px;
 	}
 
 	.portfolio-items-wrapper{

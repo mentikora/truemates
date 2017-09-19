@@ -88,6 +88,12 @@
 			h2,
 			p{
 				margin: 0;
+
+				text: {
+					transform: uppercase;
+					align: center;
+				}
+
 			}
 			h2{
 				font-weight: 900;
@@ -119,7 +125,7 @@
 		}
 
 		.ps1{
-			background-image: url('./images/bookmark-4.jpg');
+			background-image: url('./images/nivea-slide-1.jpg');
 		}
 		.ps2{
 			background-image: url('./images/bookmark-1.jpg');

@@ -1,8 +1,27 @@
 .dot-content-item{
-
 	display: none;
+	padding: {
+		top: 50px;
+		bottom: 50px;
+	}
 
+	text-align: center;
 	background-color: $color-secondary;
+
+	.brush-font{
+		margin-top: 15px;
+		
+		color: $color-primary;
+	}
+
+	iframe{
+		@media(max-width: $screen-md-max){
+			height: 300px;
+		}
+		@media(min-width: $screen-md){
+			height: 500px;
+		}
+	}
 	
 	&__title,
 	&__subtitle,
@@ -14,12 +33,19 @@
 	}
 
 	&__title{
-		margin: 0;
+		margin: {
+			top: 50px;
+			bottom: 0;
+		}
 
 		color: $color-white;
-		font: {
-			size: 144px;
-			weight: 900;
+		font-weight: 900;
+
+		@media(max-width: $screen-md-max){
+			font-size: 35px;
+		}
+		@media(min-width: $screen-md){
+			font-size: 144px;
 		}
 	}
 
@@ -28,22 +54,37 @@
 
 		text-align: center;
 		color: $color-white;
-		font: {
-			size: 72px;
-			weight: normal;
+		font-weight: normal;
+
+		@media(max-width: $screen-md-max){
+			font-size: 35px;
+		}
+		@media(min-width: $screen-md){
+			font-size: 25px;
 		}
 	}
 
 	&__text{
 		color: $color-white;
-		font: {
-			size: 28px;
-			weight: normal;
+		font-weight: normal;
+		text-align: left;
+
+		@media(max-width: $screen-md-max){
+			font-size: 16px;
+			line-height: 21px;
+
+			text-align: center;
 		}
-		line-height: 48px;
+		@media(min-width: $screen-md){
+			font-size: 24px;
+			line-height: 36px;
+		}
 
 		&--center{
-			
+			text: {
+				align: center;
+				transform: uppercase;
+			}
 		}
 	}
 
