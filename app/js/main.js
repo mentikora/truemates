@@ -22,18 +22,20 @@ $(document).ready(function(){
 	});
 
 	// Portfolio slider
-	$('.portfolio-slider').slick({
+	var portfolioSlider = $('.portfolio-slider');
+
+	portfolioSlider.slick({
 		autoplay: true,
 		autoplaySpeed: 5000,
 		arrows: false,
 		dots: false,
 		initialSlide: 1
 	});
-	$('.portfolio-slider').on('beforeChange', function(){
+	portfolioSlider.on('beforeChange', function(){
 		var currentSlideData = $('.portfolio-slider .slick-current').data('slide');
 		$('.dots-list[data-slide-dots="' + currentSlideData +'"]').removeClass('active');
 	});
-	$('.portfolio-slider').on('afterChange', function(){
+	portfolioSlider.on('afterChange', function(){
 		var currentSlideData = $('.portfolio-slider .slick-current').data('slide');
 		$('.dots-list[data-slide-dots="' + currentSlideData +'"]').addClass('active');
 	});
@@ -58,10 +60,10 @@ $(document).ready(function(){
 	// Team slider
 	$('.section-team-slider').slick({
 		autoplay: true,
-		autoplaySpeed: 2000,
+		autoplaySpeed: 1000,
 		arrows: false,
 		dots: false,
-		//fade: true
+		fade: true
 	});
 
 });
