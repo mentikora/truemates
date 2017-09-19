@@ -42,7 +42,17 @@
 
 			line-height: 21px;
 		}
-		@media(min-width: $screen-lg){
+		@media(min-width: $screen-lg)and(max-width: $screen-xl-max){
+			display: flex;
+			align-items: flex-end;
+
+			width: 100px;
+			height: 100%;
+
+			margin-right: 10px;
+			line-height: 100px;
+		}
+		@media(min-width: $screen-xl){
 			display: flex;
 			align-items: flex-end;
 
@@ -68,7 +78,15 @@
 		@media(max-width: $screen-lg-max){
 			font-size: 21px;
 		}
-		@media(min-width: $screen-lg){
+		@media(min-width: $screen-lg)and(max-width: $screen-xl-max){
+			margin-bottom: -60px;
+
+			transform: rotate(-90deg);
+			transform-origin: left top 0;
+
+			font-size: 30px;
+		}
+		@media(min-width: $screen-xl){
 			margin-bottom: -120px;
 
 			transform: rotate(-90deg);
