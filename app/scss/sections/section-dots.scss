@@ -1,13 +1,24 @@
 .section-dots{
 	padding-top: 30px;
+	
+	.dots-list-wrapper{
+		height: 280px;
+	}
 
 	.dots-list{
-		display: none;
+		//display: none;
+		display: flex;
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
 		justify-content: center;	
 
+		transition: $transition;
+
 		&.active{
-			display: flex;
+			opacity: 1;
+			height: auto;
+			overflow: visible;
 		}
 	}
-	
 }

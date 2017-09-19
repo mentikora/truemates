@@ -31,23 +31,59 @@
 		}
 	}
 	.portfolio-slider{
-		height: 300px;
+		height: 500px;
+
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
 
 		.slick-list{
 			overflow: visible;
 		}
 
+		.slick-slide{
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			justify-content:  flex-end;
+
+			height: 500px;
+			outline: 0;	
+
+			background:{
+				size: cover;
+				position: 50%;
+				repeat: no-repeat;
+			}
+			color: $color-white;
+			
+			h2,
+			p{
+				margin: 0;
+			}
+			h2{
+				font-size: 144px;
+			}
+			p{
+				font-size: 72px;
+			}
+
+
+		}
+
 		.ps1{
-			background-color: #000;
+			background-image: url('./images/bookmark-4.jpg');
 		}
 		.ps2{
-			background-color: green;
+			background-image: url('./images/bookmark-1.jpg');
 		}
 		.ps3{
-			background-color: yellow;
+			background-image: url('./images/jinx.jpg');
 		}
 		.ps4{
-			background-color: orange;
+			background-image: url('./images/portfolio-film.jpg');
 		}
 	}
 
