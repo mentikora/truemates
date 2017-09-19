@@ -1,15 +1,21 @@
 .section-welcome{
 	text-align: center;
-	
 
 	background: {
 		image: url('./images/welcome-section-bg.jpg');
 		repeat: no-repeat;
-		position: left bottom;
 		size: cover;
+		position: left bottom;
 	}
 	
-	@media(max-width: $screen-xl-max){
+	@media(max-width: $screen-sm-max){
+		background-position: -60px bottom;
+	}
+	@media(max-width: $screen-md-max){
+		min-height: calc(50vh - 70px);
+	}
+	
+	@media(min-width: $screen-md-max)and(max-width: $screen-xl-max){
 		min-height: calc(100vh - 70px);
 	}
 	@media(min-width: $screen-xl){
@@ -29,15 +35,18 @@
 
 	/* title */
 	&__title{
-		//margin-top: 180px;
 		text-transform: uppercase;
-
-		font: {
-			size: 56px;
-			weight: 300;
-		}
+		font-weight: 300;
 		color: $color-black;
-		line-height: 80px;
+		
+		@media(max-width: $screen-md-max){
+			font-size: 25px;
+			line-height: 35px;
+		}
+		@media(min-width: $screen-md){
+			font-size: 56px;
+			line-height: 80px;
+		}
 	}
 	
 	/* text */
@@ -52,7 +61,6 @@
 		font: {
 			weight: normal;
 		}
-		
 
 		@media(max-width: $screen-xl-max){
 			font-size: 18px;
@@ -73,6 +81,13 @@
 			height: auto;
 		}
 
+		&--middle{
+			@media(max-width: $screen-xl-max){
+				margin-left: 33%;
+				flex: 0 0 66%
+			}
+		}
+
 		&--right{
 			text-align: right;
 		}
@@ -80,23 +95,23 @@
 }
 
 .underwelcome{
-		@media(max-width: $screen-xl-max){
-			max-width: 80%;
-			margin: {
-				left: auto;
-				right: auto;
-				top: 50px;
-				bottom: 50px;
-			}
-			img{
-				display: inline-block;
-				max-width: 100%;
-				height: auto;
+	@media(max-width: $screen-xl-max){
+		max-width: 80%;
+		margin: {
+			left: auto;
+			right: auto;
+			top: 50px;
+			bottom: 50px;
+		}
+		img{
+			display: inline-block;
+			max-width: 100%;
+			height: auto;
 
-				margin-bottom: 50px;
-			}
-			p{
-				margin: 0;
-			}
+			margin-bottom: 50px;
+		}
+		p{
+			margin: 0;
 		}
 	}
+}
