@@ -13,7 +13,18 @@ $(document).ready(function(){
 
 	// Portfolio item, show list
 	$('.portfolio-item__image').on('click', function(){
-		$(this).siblings('.portfolio-item__list').toggleClass('visually-hidden');
+		//$(this).siblings('.portfolio-item__list').toggleClass('visually-hidden');
+		var sibl = $(this).siblings('.portfolio-item__list');
+		var li = sibl.find('li');
+
+		sibl.toggleClass('active');
+		li.each(function(i){
+	    var liCurrent = $(this);
+		  setTimeout(function() {
+        liCurrent.toggleClass('active', !liCurrent.hasClass('active'));
+      }, 100*i);
+		  
+		});
 	});
 
 	// Mobile menu button
