@@ -18,13 +18,16 @@
 			}
 		}
 		@media(min-width: $screen-lg){
-			height: 490px;
+			height: 400px;
 		}
 
 		&-inner{
 			display: flex;
 			@media(max-width: $screen-lg-max){
 				flex-direction: column;
+			}
+			@media(min-width: $screen-lg){
+				align-items: center;
 			}
 		}
 	}
@@ -46,7 +49,7 @@
 				}
 			}
 			@media(min-width: $screen-sm){
-				max-width: 470px;
+				max-width: 300px;
 			}
 			
 			display: block;
@@ -68,12 +71,12 @@
 			}
 
 			@media(max-width: $screen-xl-max){
-				font-size: 21px;
-				line-height: 35px;
+				font-size: 18px;
+				line-height: 25px;
 			}
 			@media(min-width: $screen-xl){
-				font-size: 28px;
-				line-height: 50px;
+				font-size: 21px;
+				line-height: 30px;
 			}
 		}
 		h2{

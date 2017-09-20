@@ -36,8 +36,7 @@ $(document).ready(function(){
 	var portfolioSlider = $('.portfolio-slider');
 
 	portfolioSlider.slick({
-		autoplay: true,
-		autoplaySpeed: 5000,
+		autoplay: false,
 		arrows: true,
 		dots: false,
 		initialSlide: 1
@@ -71,7 +70,7 @@ $(document).ready(function(){
 	// Team slider
 	$('.section-team-slider').slick({
 		autoplay: true,
-		autoplaySpeed: 1000,
+		autoplaySpeed: 600,
 		arrows: false,
 		dots: false,
 		fade: true

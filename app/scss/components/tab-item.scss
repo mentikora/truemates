@@ -33,6 +33,8 @@
 	&__title{
 		position: relative;
 		cursor: pointer;
+		overflow: hidden;
+		text-overflow: ellipsis;
 
 		background-color: $color-primary;
 
@@ -46,22 +48,22 @@
 		@media(min-width: $screen-lg)and(max-width: $screen-xl-max){
 			display: flex;
 			align-items: flex-end;
-
-			width: 100px;
+			flex: 0 0 80px;
+			
+			line-height: 80px;
+			width: 80px;
 			height: 100%;
-
 			margin-right: 10px;
-			line-height: 100px;
 		}
 		@media(min-width: $screen-xl){
 			display: flex;
 			align-items: flex-end;
-
-			width: 160px;
+			flex: 0 0 120px;
+			
+			line-height: 120px;
+			width: 120px;
 			height: 100%;
-
 			margin-right: 10px;
-			line-height: 160px;
 		}
 	}
 	
@@ -72,7 +74,7 @@
 		color: $color-text;
 
 		@media(max-width: $screen-lg-max){
-			font-size: 16px;
+			font-size: 18px;
 		}
 		@media(min-width: $screen-lg)and(max-width: $screen-xl-max){
 			display: block;
@@ -83,19 +85,19 @@
 			transform: rotate(-90deg);
 			transform-origin: left top 0;
 
-			font-size: 30px;
+			font-size: 24px;
 			white-space: nowrap;
 		}
 		@media(min-width: $screen-xl){
 			display: block;
 			float: left;
 
-			margin-bottom: -120px;
+			margin-bottom: -80px;
 
 			transform: rotate(-90deg);
 			transform-origin: left top 0;
 
-			font-size: 30px;
+			font-size: 24px;
 			white-space: nowrap;
 		}
 	}
@@ -148,16 +150,13 @@
 		@media(max-width: $screen-lg-max){
 			width: 50%;
 			margin: 20px 20px 0 0;
-
-			font-size: 18px;
-			line-height: 25px;
 		}
 		@media(min-width: $screen-lg){
 			width: 80%;
 			margin: 40px 40px 0 0;
 
-			font-size: 28px;
-			line-height: 48px;
+			font-size: 18px;
+			line-height: 25px;
 		}
 	}
 
