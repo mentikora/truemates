@@ -13,10 +13,7 @@
 
 		.tab-item__content{
 			display: flex;
-			
-			opacity: 1;
-
-			transition: all .25s cubic-bezier(0.39, 0.575, 0.565, 1);
+			transition: all .4s ease-in-out;
 
 			@media(max-width: $screen-lg-max){
 				height: 400px;
@@ -33,6 +30,8 @@
 	&__title{
 		position: relative;
 		cursor: pointer;
+		overflow: hidden;
+		text-overflow: ellipsis;
 
 		background-color: $color-primary;
 
@@ -46,22 +45,22 @@
 		@media(min-width: $screen-lg)and(max-width: $screen-xl-max){
 			display: flex;
 			align-items: flex-end;
-
-			width: 100px;
+			flex: 0 0 80px;
+			
+			line-height: 80px;
+			width: 80px;
 			height: 100%;
-
 			margin-right: 10px;
-			line-height: 100px;
 		}
 		@media(min-width: $screen-xl){
 			display: flex;
 			align-items: flex-end;
-
-			width: 160px;
+			flex: 0 0 120px;
+			
+			line-height: 120px;
+			width: 120px;
 			height: 100%;
-
 			margin-right: 10px;
-			line-height: 160px;
 		}
 	}
 	
@@ -72,7 +71,7 @@
 		color: $color-text;
 
 		@media(max-width: $screen-lg-max){
-			font-size: 16px;
+			font-size: 18px;
 		}
 		@media(min-width: $screen-lg)and(max-width: $screen-xl-max){
 			display: block;
@@ -83,33 +82,32 @@
 			transform: rotate(-90deg);
 			transform-origin: left top 0;
 
-			font-size: 30px;
+			font-size: 24px;
 			white-space: nowrap;
 		}
 		@media(min-width: $screen-xl){
 			display: block;
 			float: left;
 
-			margin-bottom: -120px;
+			margin-bottom: -80px;
 
 			transform: rotate(-90deg);
 			transform-origin: left top 0;
 
-			font-size: 30px;
+			font-size: 24px;
 			white-space: nowrap;
 		}
 	}
 
 	/* content */ 
 	&__content{
-		opacity: 0;
 
 		flex-direction: column;
 		align-items: flex-end;
-		flex-grow: 1;
+		overflow: hidden;
 
 		background: {
-			size: cover;
+			size: auto 100%;
 			repeat: no-repeat;
 		}
 
@@ -124,19 +122,19 @@
 	}
 
 	&__content-1{
-		background-image: url('./images/bookmark-1.jpg');
+		background-image: url('./images/welcome-section-bg.jpg');
 	}
 	&__content-2{
-		background-image: url('./images/bookmark-2.jpg');
+		background-image: url('./images/welcome-section-bg.jpg');
 	}
 	&__content-3{
-		background-image: url('./images/bookmark-3.png');
+		background-image: url('./images/welcome-section-bg.jpg');
 	}
 	&__content-4{
-		background-image: url('./images/bookmark-4.jpg');
+		background-image: url('./images/welcome-section-bg.jpg');
 	}
 	&__content-5{
-		background-image: url('./images/bookmark-5.jpg');
+		background-image: url('./images/welcome-section-bg.jpg');
 	}
 	
 	/* text */
@@ -144,20 +142,24 @@
 		font-weight: normal;
 		text-align: right;
 		color: $color-text;
+		
+		opacity: 0;
+		transition: $transition;
+
+		&.active{
+			opacity: 1;
+		}
 
 		@media(max-width: $screen-lg-max){
 			width: 50%;
 			margin: 20px 20px 0 0;
-
-			font-size: 18px;
-			line-height: 25px;
 		}
 		@media(min-width: $screen-lg){
 			width: 80%;
 			margin: 40px 40px 0 0;
 
-			font-size: 28px;
-			line-height: 48px;
+			font-size: 18px;
+			line-height: 25px;
 		}
 	}
 

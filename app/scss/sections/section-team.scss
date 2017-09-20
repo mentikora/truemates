@@ -25,29 +25,25 @@
 
 	/* title */
 	&__title{
-		margin: {
-			top: 0;
-			bottom: 40px;
-		}
-		
-		text: {
-			align: center;
-			transform: uppercase;
-		}
+		margin: 0;
 
-		font: {
-			size: 144px;
-			weight: 900;
+		text: {
+			transform: uppercase;
+			align: center;
 		}
-		color: $color-white;
+		font-weight: 300;
+		color: $color-black;
+		
 		@media(max-width: $screen-md-max){
 			display: none;
 		}
+		@media(min-width: $screen-md){
+			font-size: 65px;
+			line-height: 80px;
+		}
 	}
-
-	/* slides wrapper */
-	&__slides-wrapper{
-
+	.brush-font{
+		margin-bottom: 40px;
 	}
 }
 
@@ -89,7 +85,7 @@
 		background-color: $color-white;
 
 		@media(max-width: $screen-lg-max){
-			font-size: 18px;
+			font-size: 16px;
 
 			margin: {
 				top: 70px;
@@ -97,7 +93,7 @@
 			}
 		}
 		@media(min-width: $screen-lg){
-			font-size: 26px;
+			font-size: 16px;
 		}
 	}
 
@@ -111,10 +107,10 @@
 		background-color: $color-white;
 
 		@media(max-width: $screen-lg-max){
-			font-size: 21px;
+			font-size: 18px;
 		}
 		@media(min-width: $screen-lg){
-			font-size: 48px;
+			font-size: 24px;
 		}
 	}
 
@@ -124,20 +120,26 @@
 		background-color: $color-white;
 
 		@media(max-width: $screen-lg-max){
-			margin: {
-				top: 0;
-				bottom: 70px;
+			margin: 0;
+			&:last-child{
+				margin: {
+					top: 5px;
+					bottom: 25px;
+				}	
 			}
 
-			font-size: 18px;
+			font-size: 16px;
 		}
 		@media(min-width: $screen-lg){
-			margin: {
-				top: 0;
-				bottom: 70px;
+			margin: 0;
+			&:last-child{
+				margin: {
+					top: 5px;
+					bottom: 50px;
+				}	
 			}
 
-			font-size: 24px;
+			font-size: 16px;
 		}
 	}
 
@@ -295,29 +297,32 @@
 	}
 	&__title{
 		margin-bottom: 15px;
-
+		
+		line-height: 35px;
 		font: {
-			size: 25px;
+			size: 28px;
 			weight: normal;
 		}
 		text-transform: uppercase;
 	}
 	&__text{
 		font: {
-			size: 18px;
+			size: 16px;
 			weight: normal;
 		}
-		line-height: 28px;
+		line-height: 25px;
 	}
 	&__quote{
 		display: block;
 		margin: {
 			bottom: 15px;
 		}
-		font-size: 16px;
-		line-height: 21px;
-		font-weight: 300;
-		font-style: italic;
+		font: {
+			size: 16px;
+			weight: 300;
+			style: italic;
+		}
+		line-height: 25px;
 	}
 
 	.brush-font{

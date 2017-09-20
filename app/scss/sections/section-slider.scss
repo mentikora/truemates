@@ -50,7 +50,7 @@
 			height: 300px;
 		}
 		@media(min-width: $screen-md){
-			height: 500px;
+			height: 600px;
 		}
 
 		img{
@@ -82,7 +82,7 @@
 				height: 300px;
 			}
 			@media(min-width: $screen-md){
-				height: 500px;
+				height: 600px;
 			}
 			
 			h2,
@@ -98,23 +98,23 @@
 			h2{
 				font-weight: 900;
 				@media(max-width: $screen-lg-max){
-					font-size: 35px;
+					font-size: 28px;
 					line-height: 35px;
 				}
 				@media(min-width: $screen-lg){
-					font-size: 144px;
-					line-height: 144px;
+					font-size: 65px;
+					line-height: 80px;
 				}
 			}
 			p{
 				font-weight: normal;
 				@media(max-width: $screen-lg-max){
-					font-size: 25px;
+					font-size: 21px;
 					line-height: 25px;
 				}
 				@media(min-width: $screen-lg){
-					font-size: 72px;
-					line-height: 72px;
+					font-size: 28px;
+					line-height: 35px;
 				}
 			}
 			.brush-font{
@@ -171,7 +171,7 @@
 		@media(min-width: $screen-md){
 			left: -100px;
 
-			border-width: 250px 100px 250px 0;
+			border-width: 300px 100px 300px 0;
 			border-color: transparent $color-white transparent transparent;
 
 			&:hover{
@@ -192,7 +192,7 @@
 		@media(min-width: $screen-md){
 			right: -100px;
 
-			border-width: 250px 0 250px 100px;
+			border-width: 300px 0 300px 100px;
 			border-color: transparent transparent transparent $color-white;
 
 			&:hover{

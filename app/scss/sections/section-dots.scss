@@ -1,12 +1,12 @@
 .section-dots{
 	
 	.dots-list-wrapper{
-		padding: 30px 0;
+		padding: 20px 0;
 		@media(max-width: $screen-md-max){
 			height: 25px;
 		}
 		@media(min-width: $screen-md){
-			height: 280px;	
+			height: 150px;	
 		}
 	}
 
