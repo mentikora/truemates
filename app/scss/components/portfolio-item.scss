@@ -85,10 +85,18 @@
 		padding: 0;
 		margin: 0;
 
+		overflow: hidden;
+		pointer-events: none;
+
 		transition: $transition;
 		
-		@media(max-width: $screen-sm){
+		@media(max-width: $screen-md){
 			position: relative;
+			height: 0;
+
+			&.active{
+				height: 230px;
+			}
 		}
 		@media(min-width: $screen-md) and (max-width: $screen-lg-max){
 			top: -5px;
@@ -120,6 +128,13 @@
 			line-height: 52px;
 			color: $color-primary;
 			background-color: $portfolio-item-li-bgc;
+
+			transition: $transition;
+			transform: translateX(-110%);
+
+			&.active{
+				transform: translateX(0);				
+			}
 
 			@media(min-width: $screen-md) and (max-width: $screen-lg-max){
 				height: 35px;
