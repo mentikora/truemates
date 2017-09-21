@@ -60,8 +60,21 @@ $(document).ready(function(){
 		var data = $(this).data('dot');
 		var dataItem = $('.dot-content-item[data-dot-content="' + data +'"]');
 
+		$(this).toggleClass('active');
+		$(this).siblings().removeClass('active');
+
 		dataItem.siblings().slideUp();
 		dataItem.slideToggle();
+	});
+
+	// Close dot content
+	$('.dot-content-item__close').on('click', function(){
+		var parent = $(this).parent();
+		var parentData = parent.data('dot-content');
+		var targetDot = $('.dot-item[data-dot="'+ parentData +'"]');
+		
+		parent.slideUp();
+		targetDot.removeClass('active');
 	});
 
 	// Bookmarks

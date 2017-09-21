@@ -44,9 +44,9 @@
 		
 		@media(min-width: $screen-lg){
 			&::after{
-		    content: 'l';
+		    content: 'd';
 		    position: absolute;
-		    top: 30px;
+		    top: 20px;
 		    left: 50%;
 		    width: 100px;
 
