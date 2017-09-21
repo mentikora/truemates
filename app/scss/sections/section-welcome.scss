@@ -116,3 +116,13 @@
 		}
 	}
 }
+
+.rotating{
+	animation: rotating 4s linear infinite;
+}
+
+@keyframes rotating {
+	0% { transform: rotate(0deg); }
+  50% { transform: rotate(90deg); }
+  100% { transform: rotate(0deg); }
+}
